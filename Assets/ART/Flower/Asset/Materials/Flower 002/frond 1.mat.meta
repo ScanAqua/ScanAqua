@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e800c3c88bd776c49a2df543543b705f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246052
+  packageName: PBR Flower
+  packageVersion: 1.2.1
+  assetPath: Assets/Flower/Asset/Materials/Flower 002/frond 1.mat
+  uploadId: 666321

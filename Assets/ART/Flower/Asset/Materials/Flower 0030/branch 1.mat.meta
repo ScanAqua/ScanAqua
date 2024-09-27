@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dd41d73accf778e4e8f9550d1f28a198
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246052
+  packageName: PBR Flower
+  packageVersion: 1.2.1
+  assetPath: Assets/Flower/Asset/Materials/Flower 0030/branch 1.mat
+  uploadId: 666321
