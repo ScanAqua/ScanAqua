@@ -224,6 +224,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &91188925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91188921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &200261951
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +462,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Konosirus_Punctatus
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 82d56a8e11ca6cd41be6c42d4974348b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -457,6 +475,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 767395737}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 82d56a8e11ca6cd41be6c42d4974348b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 767395739}
   m_SourcePrefab: {fileID: 100100000, guid: 82d56a8e11ca6cd41be6c42d4974348b, type: 3}
 --- !u!1 &330585543
 GameObject:
@@ -622,6 +644,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &379055926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379055922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +877,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &454093064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454093060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1001 &500230811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -905,6 +953,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sweetfish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b04c7735ad4498740b62de8b09c5c400,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -913,6 +966,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1551352802}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b04c7735ad4498740b62de8b09c5c400,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1551352804}
   m_SourcePrefab: {fileID: 100100000, guid: b04c7735ad4498740b62de8b09c5c400, type: 3}
 --- !u!1001 &508284328
 PrefabInstance:
@@ -977,6 +1034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueYellowFish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb4b2f624bde5cd4188b024045e16199,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -985,6 +1047,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 379055924}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb4b2f624bde5cd4188b024045e16199,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 379055926}
   m_SourcePrefab: {fileID: 100100000, guid: cb4b2f624bde5cd4188b024045e16199, type: 3}
 --- !u!1 &540095668
 GameObject:
@@ -1279,6 +1345,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &767395739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767395735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &788148953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1522,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishPrefab: {fileID: 2672053232769186102, guid: 6cb0de8f630710743956b0c3556b4b72,
     type: 3}
+  BassletFish: {fileID: 0}
+  BlueYellowFish: {fileID: 0}
+  ButterflyFish: {fileID: 0}
+  Clownfish: {fileID: 0}
+  Gray_mullet: {fileID: 0}
+  Konosiruspunctatus: {fileID: 0}
+  StripedFish: {fileID: 0}
+  Sweetfish: {fileID: 0}
+  TriggerFish: {fileID: 0}
+  YellowAngelFish: {fileID: 0}
   fileName: 
 --- !u!4 &792973808
 Transform:
@@ -1736,6 +1825,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerFish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fc6ea2692fbdc24fbb695d4437fc86d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1744,6 +1838,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2033362627}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6fc6ea2692fbdc24fbb695d4437fc86d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2033362629}
   m_SourcePrefab: {fileID: 100100000, guid: 6fc6ea2692fbdc24fbb695d4437fc86d, type: 3}
 --- !u!1 &1095179952
 GameObject:
@@ -2029,6 +2127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StripedFish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0842986211d5be6468277f1f255f1f60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6106589424481687770, guid: 0842986211d5be6468277f1f255f1f60,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2047,6 +2150,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1219394589}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0842986211d5be6468277f1f255f1f60,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1219394591}
   m_SourcePrefab: {fileID: 100100000, guid: 0842986211d5be6468277f1f255f1f60, type: 3}
 --- !u!1001 &1203743945
 PrefabInstance:
@@ -2111,6 +2218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BassletFish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d0b6acbf490381042926e6588cab4486,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2119,6 +2231,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 91188923}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d0b6acbf490381042926e6588cab4486,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 91188925}
   m_SourcePrefab: {fileID: 100100000, guid: d0b6acbf490381042926e6588cab4486, type: 3}
 --- !u!1 &1219394587 stripped
 GameObject:
@@ -2147,6 +2263,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1219394591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219394587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &1239193151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,6 +2834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButterflyFish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb5638bd168ef734d81891c7fbc2d0a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2713,6 +2847,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1794017013}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb5638bd168ef734d81891c7fbc2d0a3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1794017015}
   m_SourcePrefab: {fileID: 100100000, guid: cb5638bd168ef734d81891c7fbc2d0a3, type: 3}
 --- !u!1 &1551352800 stripped
 GameObject:
@@ -2741,6 +2879,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1551352804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551352800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &1770173667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,6 +3307,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gray_mullet
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30a5ab92b8a9b404f95ae9b59766ef67,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3164,6 +3320,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 454093062}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30a5ab92b8a9b404f95ae9b59766ef67,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 454093064}
   m_SourcePrefab: {fileID: 100100000, guid: 30a5ab92b8a9b404f95ae9b59766ef67, type: 3}
 --- !u!1 &1794017011 stripped
 GameObject:
@@ -3192,6 +3352,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1794017015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794017011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1001 &1888013452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3255,6 +3428,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clownfish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: abbbf5ba0cebc6b469aa671a7542099a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3263,6 +3441,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1966962041}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: abbbf5ba0cebc6b469aa671a7542099a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1966962043}
   m_SourcePrefab: {fileID: 100100000, guid: abbbf5ba0cebc6b469aa671a7542099a, type: 3}
 --- !u!1 &1899308040
 GameObject:
@@ -3370,6 +3552,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1902507042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902507038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1001 &1962170543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3433,6 +3628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: YellowAngelFish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f503096516f4fe64e8470f255eec044f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3441,6 +3641,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1902507040}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f503096516f4fe64e8470f255eec044f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1902507042}
   m_SourcePrefab: {fileID: 100100000, guid: f503096516f4fe64e8470f255eec044f, type: 3}
 --- !u!1 &1966962039 stripped
 GameObject:
@@ -3469,6 +3673,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1966962043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966962039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &2033362625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6fc6ea2692fbdc24fbb695d4437fc86d,
@@ -3496,6 +3713,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2033362629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033362625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1001 &2079163533037534654
 PrefabInstance:
   m_ObjectHideFlags: 0

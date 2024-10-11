@@ -6,6 +6,7 @@ using System.IO;
 public class FishManager : MonoBehaviour
 {
     public GameObject fishPrefab;
+    public GameObject BassletFish; public GameObject BlueYellowFish; public GameObject ButterflyFish; public GameObject Clownfish; public GameObject Gray_mullet; public GameObject Konosiruspunctatus; public GameObject StripedFish; public GameObject Sweetfish; public GameObject TriggerFish; public GameObject YellowAngelFish;
     private GameObject newFish;
     public string fileName = "";
     private bool fileDetected = false;  // 파일 감지를 나타내는 플래그 변수
@@ -31,12 +32,12 @@ public class FishManager : MonoBehaviour
     private void OnFileCreated(object sender, FileSystemEventArgs e)
     {
         // .meta 파일이면 무시
-        if (fileName.EndsWith(".jpg"))
+        if (fileName.EndsWith(".png"))
         {
             return; // .meta 파일을 무시하고 종료
         }
         Debug.Log("새로운 파일이 감지되었습니다: " + e.Name);
-        fileName = e.Name;  // 파일 이름을 저장
+        fileName = Path.GetFileNameWithoutExtension(e.Name);  // 파일 이름을 저장
         fileDetected = true;  // 파일 감지 플래그를 true로 설정
     }
 
@@ -46,8 +47,9 @@ public class FishManager : MonoBehaviour
         if (fileDetected)
         {
             // 물고기 생성
-            Vector3 spawnPosition = new Vector3(Random.Range(-15, 15), Random.Range(-9, 9), 0);
-            newFish = Instantiate(fishPrefab, spawnPosition, Quaternion.Euler(0, 90, 0));
+            //Vector3 spawnPosition = new Vector3(Random.Range(-15, 15), Random.Range(-9, 9), 0);
+            //newFish = Instantiate(BassletFish, spawnPosition, Quaternion.Euler(0, 90, 0));
+
             Debug.Log("새로운 물고기가 생성되었습니다.");
 
             // 코루틴으로 텍스처 로드
@@ -60,7 +62,7 @@ public class FishManager : MonoBehaviour
 
     private IEnumerator LoadTexture(string fileName)
     {
-        string fullPath = Path.Combine(Application.dataPath, "Resources/Textures", fileName);
+        string fullPath = Path.Combine(Application.dataPath, "Resources/Textures", fileName + ".png");
 
         // 파일이 존재하는지 확인
         if (File.Exists(fullPath))
@@ -88,5 +90,54 @@ public class FishManager : MonoBehaviour
         }
 
         yield return null;
+    }
+    private void SpawnFish(string fileName)
+    {
+        GameObject fishPrefab = null;
+
+        // 파일 이름에 따라 프리팹 선택
+        switch (fileName.ToLower()) // 소문자로 변환하여 비교
+        {
+            case "bassletfish":
+                fishPrefab = BassletFish;
+                break;
+            case "blueyellowfish":
+                fishPrefab = BlueYellowFish;
+                break;
+            case "butterflyfish":
+                fishPrefab = ButterflyFish;
+                break;
+            case "clownfish":
+                fishPrefab = Clownfish;
+                break;
+            case "gray_mullet":
+                fishPrefab = Gray_mullet;
+                break;
+            case "konosiruspunctatus":
+                fishPrefab = Konosiruspunctatus;
+                break;
+            case "stripedfish":
+                fishPrefab = StripedFish;
+                break;
+            case "sweetfish":
+                fishPrefab = Sweetfish;
+                break;
+            case "triggerfish":
+                fishPrefab = TriggerFish;
+                break;
+            case "yellowangelfish":
+                fishPrefab = YellowAngelFish;
+                break;
+            default:
+                Debug.LogError("해당하는 프리팹이 없습니다: " + fileName);
+                return;
+        }
+
+        // 프리팹이 설정된 경우에만 생성
+        if (fishPrefab != null)
+        {
+            Vector3 spawnPosition = new Vector3(Random.Range(-15, 15), Random.Range(-9, 9), 0);
+            newFish = Instantiate(fishPrefab, spawnPosition, Quaternion.Euler(0, 90, 0));
+        }
     }
 }
