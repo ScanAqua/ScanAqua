@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Text.RegularExpressions;
 
 public class FishManager : MonoBehaviour
 {
@@ -46,14 +47,9 @@ public class FishManager : MonoBehaviour
         // 파일이 감지되었다면 메인 스레드에서 작업 처리
         if (fileDetected)
         {
-            // 물고기 생성
-            //Vector3 spawnPosition = new Vector3(Random.Range(-15, 15), Random.Range(-9, 9), 0);
-            //newFish = Instantiate(BassletFish, spawnPosition, Quaternion.Euler(0, 90, 0));
+            SpawnFish(fileName);
 
             Debug.Log("새로운 물고기가 생성되었습니다.");
-
-            // 코루틴으로 텍스처 로드
-            StartCoroutine(LoadTexture(fileName));
 
             // 파일 감지 플래그 리셋
             fileDetected = false;
@@ -78,6 +74,7 @@ public class FishManager : MonoBehaviour
 
                 // 물고기의 SkinnedMeshRenderer에 텍스처 적용
                 newFish.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().material.mainTexture = newTexture;
+                fishPrefab = null;
             }
             else
             {
@@ -96,7 +93,7 @@ public class FishManager : MonoBehaviour
         GameObject fishPrefab = null;
 
         // 파일 이름에 따라 프리팹 선택
-        switch (fileName.ToLower()) // 소문자로 변환하여 비교
+        switch (Regex.Replace(fileName, @"\d", "").ToLower()) // 소문자로 변환하여 비교
         {
             case "bassletfish":
                 fishPrefab = BassletFish;
@@ -138,6 +135,8 @@ public class FishManager : MonoBehaviour
         {
             Vector3 spawnPosition = new Vector3(Random.Range(-15, 15), Random.Range(-9, 9), 0);
             newFish = Instantiate(fishPrefab, spawnPosition, Quaternion.Euler(0, 90, 0));
+            StartCoroutine(LoadTexture(fileName));
+
         }
     }
 }
