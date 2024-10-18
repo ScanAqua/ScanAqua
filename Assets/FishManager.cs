@@ -133,7 +133,7 @@ public class FishManager : MonoBehaviour
         // 프리팹이 설정된 경우에만 생성
         if (fishPrefab != null)
         {
-            Vector3 spawnPosition = new Vector3(Random.Range(-15, 15), Random.Range(-9, 9), 0);
+            Vector3 spawnPosition = new Vector3(Random.Range(-25, 25), Random.Range(-17, 17), Random.Range(30, 10));
             newFish = Instantiate(fishPrefab, spawnPosition, Quaternion.Euler(0, 90, 0));
             StartCoroutine(LoadTexture(fileName));
 

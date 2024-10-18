@@ -23,7 +23,7 @@ public class FishScript : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(direction); // 대상 방향을 바라보는 회전 계산
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
-        speed = Vector3.Distance(destination, transform.position)/2;
+        speed = Vector3.Distance(destination, transform.position)/5 + 0.3f;
         GetComponent<Animator>().speed = speed;
         transform.Translate(0, 0, speed * Time.deltaTime);
 
@@ -34,7 +34,7 @@ public class FishScript : MonoBehaviour
         while (true)
         {
             // Vector3 값을 랜덤하게 재지정
-            destination = new Vector3(Random.Range(-16, 16), Random.Range(-10, 10), Random.Range(-4, 4));
+            destination = new Vector3(Random.Range(-25, 25), Random.Range(-17, 17), Random.Range(30, 10));
 
             // 5초 기다림
             yield return new WaitForSeconds(Random.Range(1, 4));
