@@ -10,6 +10,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6ac6744bd65384349b2a6fe8fd823b60,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6ac6744bd65384349b2a6fe8fd823b60,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6ac6744bd65384349b2a6fe8fd823b60,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6ac6744bd65384349b2a6fe8fd823b60,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -58,6 +73,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6ac6744bd65384349b2a6fe8fd823b60,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6ac6744bd65384349b2a6fe8fd823b60,
         type: 3}
       propertyPath: m_Name
@@ -71,6 +91,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4629069479200652937}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ac6744bd65384349b2a6fe8fd823b60,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3636241771652177387}
   m_SourcePrefab: {fileID: 100100000, guid: 6ac6744bd65384349b2a6fe8fd823b60, type: 3}
 --- !u!1 &2094219772496450105 stripped
 GameObject:
@@ -99,3 +123,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3636241771652177387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094219772496450105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8508b72cf1c21d14c9711729d9511f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.5
+  runSpeed: 1
+  aniSpeed: 2

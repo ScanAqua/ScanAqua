@@ -7,6 +7,7 @@ public class WalkingBirdScript : MonoBehaviour
     float speed = 0;
     public float rotationSpeed = 1f;
     public float runSpeed = 1f;
+    public float aniSpeed = 1f;
     Quaternion targetRotation;
     Vector3 destination;
     void Start()
@@ -23,10 +24,13 @@ public class WalkingBirdScript : MonoBehaviour
             targetRotation = Quaternion.LookRotation(direction); // 대상 방향을 바라보는 회전 계산
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
-        speed = (Vector3.Distance(destination, transform.position) / 10 + Quaternion.Angle(transform.rotation, targetRotation)/90) * runSpeed;
-        GetComponent<Animator>().speed = speed/runSpeed;
+        speed = (Vector3.Distance(destination, transform.position) / 10 + 1) * runSpeed;
+        GetComponent<Animator>().speed = (speed + Quaternion.Angle(transform.rotation, targetRotation) / 45 * rotationSpeed) *aniSpeed;
         transform.Translate(0, 0, speed * Time.deltaTime);
-
+        if(Vector3.Distance(destination, transform.position) < 2)
+        {
+            destination = new Vector3(Random.Range(-25, 25), -5, Random.Range(40, 10));
+        }
     }
 
     IEnumerator ChangeDestination()
@@ -34,10 +38,10 @@ public class WalkingBirdScript : MonoBehaviour
         while (true)
         {
             // Vector3 값을 랜덤하게 재지정
-            destination = new Vector3(Random.Range(-25, 25), -5, Random.Range(30, 10));
+            destination = new Vector3(Random.Range(-25, 25), -5, Random.Range(40, 10));
 
             // 5초 기다림
-            yield return new WaitForSeconds(Random.Range(1, 4));
+            yield return new WaitForSeconds(Random.Range(2, 5));
         }
     }
 }
