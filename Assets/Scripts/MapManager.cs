@@ -16,18 +16,21 @@ public class MapManager : MonoBehaviour
     public void OnSeaButtonClick()
     {
         seaPanel.SetActive(true);  // SeaPanel 활성화
+        GameObject.Find("System").GetComponent<SystemScript>().theme = 0;
         PlayVideo(seaPanel);       // 바다 영상 재생
     }
 
     public void OnSkyButtonClick()
     {
         skyPanel.SetActive(true);  // SkyPanel 활성화
+        GameObject.Find("System").GetComponent<SystemScript>().theme = 1;
         PlayVideo(skyPanel);       // 하늘 영상 재생
     }
 
     public void OnGroundButtonClick()
     {
         groundPanel.SetActive(true);  // GroundPanel 활성화
+        GameObject.Find("System").GetComponent<SystemScript>().theme = 2;
         PlayVideo(groundPanel);       // 땅 영상 재생
     }
 
