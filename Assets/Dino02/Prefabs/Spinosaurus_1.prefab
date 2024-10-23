@@ -10,18 +10,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -10.51
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
         type: 3}
@@ -58,6 +73,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1e2bf6c21c8e49b479572221b903e795,
         type: 3}
       propertyPath: m_Name
@@ -71,6 +91,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 359399760577204309}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e2bf6c21c8e49b479572221b903e795,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3962423614936035929}
   m_SourcePrefab: {fileID: 100100000, guid: 1e2bf6c21c8e49b479572221b903e795, type: 3}
 --- !u!1 &4340303627973465033 stripped
 GameObject:
@@ -99,3 +123,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3962423614936035929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340303627973465033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9203469e55c5947bc61c7c9c61b3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.3
+  runSpeed: 1.7
+  aniSpeed: 0.2
