@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 1
   runSpeed: 2
+  aniSpeed: 1
 --- !u!1 &461000042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,7 +1204,7 @@ PrefabInstance:
     - target: {fileID: 2286870205586785934, guid: 851793b1f4d92f34e8b7bb39413604b4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 59.8
       objectReference: {fileID: 0}
     - target: {fileID: 2286870205586785934, guid: 851793b1f4d92f34e8b7bb39413604b4,
         type: 3}
@@ -1274,6 +1275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 0.5
   runSpeed: 1.5
+  aniSpeed: 1
 --- !u!1 &1529963515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,79 +1382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1550879556
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2672053232769186102, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_Name
-      value: Test_Fish
-      objectReference: {fileID: 0}
-    - target: {fileID: 2672053232769186102, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 25.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 17.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 26.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341348691617538956, guid: 6cb0de8f630710743956b0c3556b4b72,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6cb0de8f630710743956b0c3556b4b72, type: 3}
 --- !u!1 &1686445677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,12 +1759,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c8bf0ffa9e32248bd47b894f092522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IP: 172.16.5.27
+  IP: 192.168.50.66
   port: 9999
   isReceived: 0
-  testObject: {fileID: 946071728672618270, guid: 4e699b6828806f04c918e5eb1893984a,
-    type: 3}
+  testImage: {fileID: 2800000, guid: a1dc0a9216e336242ace3f528e83712d, type: 3}
   theme: -1
+  fishes:
+  - {fileID: 4278041345967535589, guid: afa3d4c0f78813043b48d446e8725f9b, type: 3}
+  - {fileID: 101389375936472057, guid: f56ab1f0dae5ca945957abf31f5c5fb6, type: 3}
+  - {fileID: 1512105012545795172, guid: 80d6b952c8060a6409760844ac348390, type: 3}
+  - {fileID: 995389911015355517, guid: ffdc815e16460204eb701211a10b46ec, type: 3}
+  - {fileID: 4196308146116708743, guid: 2dad9b3356dd6dd49ab174c7bab0a015, type: 3}
+  - {fileID: 9049538278554835566, guid: e3d32aefa6b91a542b93cf672ffb21e5, type: 3}
+  - {fileID: 3553045579745586906, guid: c728edaf123125b478ed137b0a1869c5, type: 3}
+  - {fileID: 216261991607878458, guid: de015ffc31957a245b33798e329b494c, type: 3}
+  - {fileID: 4922731949782752897, guid: c28bdb007279e244baa9fadf351122b7, type: 3}
+  - {fileID: 7317064186149531332, guid: c38f28ddab224264abaa61b020d20f5d, type: 3}
+  birds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dinos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1830426256
 Transform:
   m_ObjectHideFlags: 0
@@ -2131,7 +2082,6 @@ SceneRoots:
   - {fileID: 482864177}
   - {fileID: 1373189980}
   - {fileID: 926904506}
-  - {fileID: 1550879556}
   - {fileID: 1529963519}
   - {fileID: 1386201467}
   - {fileID: 846957209}

@@ -9,8 +9,12 @@ public class SystemScript : MonoBehaviour
     WebSocket socket;
     public bool isReceived = false;
     string data;                                // 웹소켓으로 전송 받은 데이터를 저장할 변수
-    public GameObject testObject;               // 프리팹 배열로 변경 예정
+    public Texture2D testImage;                 // 테스트 이미지
     public int theme = -1;                      // 테마 기본값 -1 -> 선택하면 0, 1, 2 중 하나
+
+    public GameObject[] fishes = new GameObject[10];
+    public GameObject[] birds = new GameObject[5];
+    public GameObject[] dinos = new GameObject[5];
 
     void Awake()
     {
@@ -25,17 +29,18 @@ public class SystemScript : MonoBehaviour
 
     void Update()
     {
-        /* 이미지 전송 테스트용 캡쳐 이미지 보내기
+        ///* 이미지 전송 테스트용 캡쳐 이미지 보내기
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            byte[] decodedImage = ScreenCapture.CaptureScreenshotAsTexture().EncodeToPNG();
+            //byte[] decodedImage = ScreenCapture.CaptureScreenshotAsTexture().EncodeToPNG();
+            byte[] decodedImage = testImage.EncodeToPNG();
             JSONObject sendData = new JSONObject();
             sendData.AddField("type", "image");
-            sendData.AddField("creature", theme == 0? Random.Range(0, 10) : Random.Range(0, 5));
+            sendData.AddField("creature", 0);
             sendData.AddField("image", System.Convert.ToBase64String(decodedImage));
             socket.Send(sendData.ToString());
         }
-        */
+        //*/
 
         if (isReceived)
         {
@@ -62,8 +67,17 @@ public class SystemScript : MonoBehaviour
 
                 Texture2D receivedImage = new Texture2D(2, 2);                  // 텍스쳐 생성
                 bool isLoaded = receivedImage.LoadImage(imageData);             // byte[] -> 텍스쳐 적용
-                GameObject test = Instantiate(testObject, new Vector3(Random.Range(-40f, 40f), Random.Range(0, 50f), 0), Quaternion.identity);  // 프리팹 생성
-                test.GetComponent<MeshRenderer>().material.mainTexture = receivedImage;                                                         // 텍스쳐를 재질로 적용
+
+                if (isLoaded)
+                {
+                    GameObject[] group = theme == 0 ? fishes : theme == 1 ? birds : dinos;
+                    GameObject animal = group[creature];
+                    Vector3 position = Vector3.zero;
+                    GameObject obj = Instantiate(animal);
+                    obj.GetComponentInChildren<SkinnedMeshRenderer>().material.mainTexture = receivedImage;
+                }
+                //GameObject test = Instantiate(testObject, new Vector3(Random.Range(-40f, 40f), Random.Range(0, 50f), 0), Quaternion.identity);  // 프리팹 생성
+                //test.GetComponent<MeshRenderer>().material.mainTexture = receivedImage;                                                         // 텍스쳐를 재질로 적용
             }
             isReceived = false;
             data = null;                                                        // 전송 받은 데이터 초기화
