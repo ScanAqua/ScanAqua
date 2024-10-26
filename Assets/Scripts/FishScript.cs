@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FishScript : MonoBehaviour
 {
+    public GameObject mapManager;
     float speed = 0;
     public float rotationSpeed = 1f;
     public bool end = false;
@@ -32,13 +33,17 @@ public class FishScript : MonoBehaviour
         }
         else
         {
-            Vector3 direction = destination - transform.position; // 대상 벡터로의 방향
+            rotationSpeed = 2f;
+            Vector3 direction = new Vector3 (0,1,10) - transform.position; // 대상 벡터로의 방향
             if (direction != Vector3.zero) // 방향이 0이 아닐 때만 회전
             {
                 Quaternion targetRotation = Quaternion.LookRotation(-direction); // 대상 방향을 바라보는 회전 계산
                 transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
             }
-            transform.Translate(0, 0, 1 * Time.deltaTime);
+            float dist = Vector3.Distance(new Vector3(0, 1, 10), transform.position);
+            transform.Translate(0, 0, (40 - (dist<40  ?dist :40)) * Time.deltaTime);
+            GetComponent<Animator>().speed = 10 - (dist < 40 ? dist : 40) / 4;
+            //if (transform.position.y < 10) Destroy
         }
         
 

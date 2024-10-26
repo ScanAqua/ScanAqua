@@ -11,7 +11,7 @@ public class MapManager : MonoBehaviour
     public GameObject fishManager;
     public GameObject birdManager;
     public GameObject dinosaurManager;
-
+    public GameObject shadow;
     public GameObject uiCanvas;
 
     private VideoPlayer videoPlayer;
@@ -22,6 +22,7 @@ public class MapManager : MonoBehaviour
         seaPanel.SetActive(true);  // SeaPanel 활성화
         fishManager.SetActive(true);
         PlayVideo(seaPanel);       // 바다 영상 재생
+        shadow.transform.position = new Vector3(0, -20, 60);
     }
 
     public void OnSkyButtonClick()
@@ -29,6 +30,7 @@ public class MapManager : MonoBehaviour
         skyPanel.SetActive(true);  // SkyPanel 활성화
         birdManager.SetActive(true);
         PlayVideo(skyPanel);       // 하늘 영상 재생
+        shadow.transform.position = new Vector3(0, -5, 60);
     }
 
     public void OnGroundButtonClick()
@@ -36,6 +38,7 @@ public class MapManager : MonoBehaviour
         groundPanel.SetActive(true);  // GroundPanel 활성화
         dinosaurManager.SetActive(true);
         PlayVideo(groundPanel);       // 땅 영상 재생
+        shadow.transform.position = new Vector3(0, -2, 60);
     }
 
     private void PlayVideo(GameObject panel)
@@ -51,32 +54,32 @@ public class MapManager : MonoBehaviour
     private void EndReached(VideoPlayer vp)
     {
         vp.gameObject.SetActive(false);  // 패널 비활성화
-
         uiCanvas.SetActive(true); //UI 다시 활성화
     }
     void Update()
     {
         // 1. 시간이 5초 이상 되었을 때
-        if (videoPlayer.time >= 26 && videoPlayer.time <= 41)
+        if (videoPlayer.time >= 26-23 && videoPlayer.time <= 41-23)
         {
-            if (videoPlayer.time >= 26 && speed < 10)
+            if (videoPlayer.time >= 26 - 23)
             {
-                speed += 1.6f * Time.deltaTime;
+                if(speed < 40) speed += 6f * Time.deltaTime;
             }
-            else if(videoPlayer.time > 32 && videoPlayer.time < 35)
+            else if(videoPlayer.time > 32 - 23 && videoPlayer.time < 35 - 23)
             {
-                speed = 10f;
+                speed = 40f;
             }
-            else if (videoPlayer.time >= 35 && speed < 10)
+            else if (videoPlayer.time >= 35 - 23)
             {
-
+                if(speed > 0) speed -= 6f * Time.deltaTime;
             }
             fishes = GameObject.FindGameObjectsWithTag("fish");
             foreach (GameObject fish in fishes)
             {
                 fish.transform.Translate(Vector3.forward * -speed * Time.deltaTime, Space.World);
+                fish.GetComponent<FishScript>().end = true;
             }
-            
         }
+        //else if (videoPlayer.time >= 3 && videoPlayer.time <= 18){
     }
 }

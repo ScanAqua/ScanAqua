@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e2bf6c21c8e49b479572221b903e795,
         type: 3}
@@ -138,3 +138,4 @@ MonoBehaviour:
   rotationSpeed: 0.3
   runSpeed: 1.7
   aniSpeed: 0.2
+  y: 0

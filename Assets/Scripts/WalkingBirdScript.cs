@@ -8,11 +8,14 @@ public class WalkingBirdScript : MonoBehaviour
     public float rotationSpeed = 1f;
     public float runSpeed = 1f;
     public float aniSpeed = 1f;
+    public float y;
     Quaternion targetRotation;
     Vector3 destination;
     void Start()
     {
         StartCoroutine(ChangeDestination());
+        y = transform.position.y;
+        destination = new Vector3(Random.Range(-25, 25), y, Random.Range(35, 0));
     }
 
     // Update is called once per frame
@@ -25,11 +28,11 @@ public class WalkingBirdScript : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
         speed = (Vector3.Distance(destination, transform.position) / 10 + 1) * runSpeed;
-        GetComponent<Animator>().speed = (speed + Quaternion.Angle(transform.rotation, targetRotation) / 45 * rotationSpeed) *aniSpeed;
+        GetComponent<Animator>().speed = (speed + Quaternion.Angle(transform.rotation, targetRotation) / 45 * rotationSpeed) * aniSpeed;
         transform.Translate(0, 0, speed * Time.deltaTime);
         if(Vector3.Distance(destination, transform.position) < 2)
         {
-            destination = new Vector3(Random.Range(-25, 25), -5, Random.Range(40, 10));
+            destination = new Vector3(Random.Range(-25, 25), y, Random.Range(35, 0));
         }
     }
 
@@ -38,7 +41,7 @@ public class WalkingBirdScript : MonoBehaviour
         while (true)
         {
             // Vector3 값을 랜덤하게 재지정
-            destination = new Vector3(Random.Range(-25, 25), -5, Random.Range(40, 10));
+            destination = new Vector3(Random.Range(-25, 25), y, Random.Range(35, 0));
 
             // 5초 기다림
             yield return new WaitForSeconds(Random.Range(2, 5));

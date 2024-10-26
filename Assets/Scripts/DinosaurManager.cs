@@ -100,19 +100,19 @@ public class DinosaurManager : MonoBehaviour
                 break;
             case "spinosaurus":
                 DinosaurPrefab = Spinosaurus;
-                spawnPosition = new Vector3(Random.Range(-25, 25), -5, Random.Range(30, 10));
+                spawnPosition = new Vector3(Random.Range(-25, 25), -2, Random.Range(30, 10));
                 break;
             case "t_rex":
                 DinosaurPrefab = T_Rex;
-                spawnPosition = new Vector3(Random.Range(-25, 25), -5, Random.Range(30, 10));
+                spawnPosition = new Vector3(Random.Range(-25, 25), -2, Random.Range(30, 10));
                 break;
             case "triceratops":
                 DinosaurPrefab = Triceratops;
-                spawnPosition = new Vector3(Random.Range(-25, 25), -5, Random.Range(30, 10));
+                spawnPosition = new Vector3(Random.Range(-25, 25), -2, Random.Range(30, 10));
                 break;
             case "velociraptor":
                 DinosaurPrefab = Velociraptor;
-                spawnPosition = new Vector3(Random.Range(-25, 25), -5, Random.Range(30, 10));
+                spawnPosition = new Vector3(Random.Range(-25, 25), -2, Random.Range(30, 10));
                 break;
             default:
                 Debug.LogError("해당하는 프리팹이 없습니다: " + fileName);
