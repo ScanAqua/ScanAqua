@@ -98,6 +98,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clownfish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f224a6beb134f1b40b2bc99bfef5d2e6,
+        type: 3}
+      propertyPath: m_TagString
+      value: fish
+      objectReference: {fileID: 0}
     - target: {fileID: 3397557432789257905, guid: f224a6beb134f1b40b2bc99bfef5d2e6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

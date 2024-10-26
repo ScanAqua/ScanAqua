@@ -8,26 +8,33 @@ public class MapManager : MonoBehaviour
     public GameObject seaPanel;
     public GameObject skyPanel;
     public GameObject groundPanel;
+    public GameObject fishManager;
+    public GameObject birdManager;
+    public GameObject dinosaurManager;
 
     public GameObject uiCanvas;
 
     private VideoPlayer videoPlayer;
-
+    private GameObject[] fishes;
+    private float speed = 0;
     public void OnSeaButtonClick()
     {
         seaPanel.SetActive(true);  // SeaPanel 활성화
+        fishManager.SetActive(true);
         PlayVideo(seaPanel);       // 바다 영상 재생
     }
 
     public void OnSkyButtonClick()
     {
         skyPanel.SetActive(true);  // SkyPanel 활성화
+        birdManager.SetActive(true);
         PlayVideo(skyPanel);       // 하늘 영상 재생
     }
 
     public void OnGroundButtonClick()
     {
         groundPanel.SetActive(true);  // GroundPanel 활성화
+        dinosaurManager.SetActive(true);
         PlayVideo(groundPanel);       // 땅 영상 재생
     }
 
@@ -46,5 +53,30 @@ public class MapManager : MonoBehaviour
         vp.gameObject.SetActive(false);  // 패널 비활성화
 
         uiCanvas.SetActive(true); //UI 다시 활성화
+    }
+    void Update()
+    {
+        // 1. 시간이 5초 이상 되었을 때
+        if (videoPlayer.time >= 26 && videoPlayer.time <= 41)
+        {
+            if (videoPlayer.time >= 26 && speed < 10)
+            {
+                speed += 1.6f * Time.deltaTime;
+            }
+            else if(videoPlayer.time > 32 && videoPlayer.time < 35)
+            {
+                speed = 10f;
+            }
+            else if (videoPlayer.time >= 35 && speed < 10)
+            {
+
+            }
+            fishes = GameObject.FindGameObjectsWithTag("fish");
+            foreach (GameObject fish in fishes)
+            {
+                fish.transform.Translate(Vector3.forward * -speed * Time.deltaTime, Space.World);
+            }
+            
+        }
     }
 }
