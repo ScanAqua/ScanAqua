@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using WebSocketSharp;
 using Defective.JSON;
 
@@ -11,6 +12,9 @@ public class SystemScript : MonoBehaviour
     string data;                                // 웹소켓으로 전송 받은 데이터를 저장할 변수
     public Texture2D testImage;                 // 테스트 이미지
     public int theme = -1;                      // 테마 기본값 -1 -> 선택하면 0, 1, 2 중 하나
+
+    public GameObject options;
+    public int optionCount = 0;
 
     public GameObject[] fishes = new GameObject[10];
     public GameObject[] birds = new GameObject[5];
@@ -30,7 +34,7 @@ public class SystemScript : MonoBehaviour
     void Update()
     {
         ///* 이미지 전송 테스트용 캡쳐 이미지 보내기
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && theme == 0)
         {
             //byte[] decodedImage = ScreenCapture.CaptureScreenshotAsTexture().EncodeToPNG();
             byte[] decodedImage = testImage.EncodeToPNG();
@@ -82,6 +86,31 @@ public class SystemScript : MonoBehaviour
             isReceived = false;
             data = null;                                                        // 전송 받은 데이터 초기화
         }
+    }
+
+    public void Reconnect()
+    {
+        socket.Close();
+
+        IP = GameObject.Find("Input").transform.GetChild(0).GetComponent<InputField>().text;
+        port = GameObject.Find("Input").transform.GetChild(1).GetComponent<InputField>().text;
+
+        socket = new WebSocket($"ws://{IP}:{port}");
+        socket.Connect();
+        socket.OnMessage += (sender, e) =>
+        {
+            data = e.Data;
+            isReceived = true;
+        };
+    }
+
+    public void HiddenMenu()
+    {
+        if (optionCount >= 6)
+        {
+            options.SetActive(!options.activeSelf ? true : false);
+            optionCount = 0;
+        } else optionCount++;
     }
 
     private void OnApplicationQuit()
