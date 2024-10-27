@@ -13,6 +13,8 @@ public class MapManager : MonoBehaviour
     public GameObject dinosaurManager;
     public GameObject shadow;
     public GameObject uiCanvas;
+    public GameObject uiUp;
+    public GameObject uiDown;
 
     private VideoPlayer videoPlayer;
     private GameObject[] fishes;
@@ -55,23 +57,40 @@ public class MapManager : MonoBehaviour
     {
         vp.gameObject.SetActive(false);  // 패널 비활성화
         uiCanvas.SetActive(true); //UI 다시 활성화
+        fishManager.SetActive(false);
+        birdManager.SetActive(false);
+        dinosaurManager.SetActive(false);
     }
     void Update()
     {
-        // 1. 시간이 5초 이상 되었을 때
-        if (videoPlayer.time >= 26-23 && videoPlayer.time <= 41-23)
+        // 1. 시간이 26초 이상 되었을 때
+        if (videoPlayer.time >= 26 && videoPlayer.time <= 41)
         {
-            if (videoPlayer.time >= 26 - 23)
+            if (videoPlayer.time >= 26)
             {
-                if(speed < 40) speed += 6f * Time.deltaTime;
+                if (speed < 60) speed += 10f * Time.deltaTime;
+
+                Vector3 uiUpVector = uiUp.GetComponent<RectTransform>().localPosition;
+                Vector3 uiDownVector = uiDown.GetComponent<RectTransform>().localPosition;
+                if (uiUpVector.y > 482)
+                {
+                    uiUp.GetComponent<RectTransform>().localPosition = uiUpVector - new Vector3(0, 118 * Time.deltaTime, 0);
+                    uiDown.GetComponent<RectTransform>().localPosition = uiDownVector + new Vector3(0, 131 * Time.deltaTime, 0);
+                }
+                else
+                {
+                    uiUp.GetComponent<RectTransform>().localPosition = new Vector3(0, 482, 0);
+                    uiDown.GetComponent<RectTransform>().localPosition = new Vector3(0, -469, 0);
+                }
+
             }
-            else if(videoPlayer.time > 32 - 23 && videoPlayer.time < 35 - 23)
+            else if (videoPlayer.time > 32 && videoPlayer.time < 36)
             {
-                speed = 40f;
+                speed = 60f;
             }
-            else if (videoPlayer.time >= 35 - 23)
+            else if (videoPlayer.time >= 36)
             {
-                if(speed > 0) speed -= 6f * Time.deltaTime;
+                if (speed > 0) speed -= 10f * Time.deltaTime;
             }
             fishes = GameObject.FindGameObjectsWithTag("fish");
             foreach (GameObject fish in fishes)
@@ -80,6 +99,66 @@ public class MapManager : MonoBehaviour
                 fish.GetComponent<FishScript>().end = true;
             }
         }
-        //else if (videoPlayer.time >= 3 && videoPlayer.time <= 18){
+
+        else if (videoPlayer.time >= 75 && videoPlayer.time <= 85)
+        {
+            if (videoPlayer.time >= 75)
+            {
+                if (speed < 60) speed += 12f * Time.deltaTime;
+            }
+            else if (videoPlayer.time > 80  && videoPlayer.time < 82 )
+            {
+                speed = 60f;
+            }
+            else if (videoPlayer.time >= 82)
+            {
+                if (speed > 0) speed -= 20f * Time.deltaTime;
+            }
+            fishes = GameObject.FindGameObjectsWithTag("fish");
+            foreach (GameObject fish in fishes)
+            {
+                fish.transform.Translate(Vector3.forward * -speed * Time.deltaTime, Space.World);
+                fish.GetComponent<FishScript>().end = true;
+            }
+        }
+
+        else if (videoPlayer.time >= 127 && videoPlayer.time <= 140)
+        {
+            if (videoPlayer.time >= 127)
+            {
+                if (speed < 60) speed += 20f * Time.deltaTime;
+            }
+            else if (videoPlayer.time > 130 && videoPlayer.time < 138)
+            {
+                speed = 60f;
+            }
+            else if (videoPlayer.time >= 138)
+            {
+                if (speed > 0) speed -= 30f * Time.deltaTime;
+            }
+            fishes = GameObject.FindGameObjectsWithTag("fish");
+            foreach (GameObject fish in fishes)
+            {
+                fish.transform.Translate(Vector3.forward * -speed * Time.deltaTime, Space.World);
+                fish.GetComponent<FishScript>().end = true;
+            }
+        }
+        else
+        {
+            speed = 0;
+
+            Vector3 uiUpVector = uiUp.GetComponent<RectTransform>().localPosition;
+            Vector3 uiDownVector = uiDown.GetComponent<RectTransform>().localPosition;
+            if (uiUpVector.y < 718)
+            {
+                uiUp.GetComponent<RectTransform>().localPosition = uiUpVector + new Vector3(0, 118 * Time.deltaTime, 0);
+                uiDown.GetComponent<RectTransform>().localPosition = uiDownVector - new Vector3(0, 131 * Time.deltaTime, 0);
+            }
+            else
+            {
+                uiUp.GetComponent<RectTransform>().localPosition = new Vector3(0, 718, 0);
+                uiDown.GetComponent<RectTransform>().localPosition = new Vector3(0, -731, 0);
+            }
+        }
     }
 }
