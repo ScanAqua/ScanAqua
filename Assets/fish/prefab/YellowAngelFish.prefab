@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6cdd2bae08857584e86aec30c6170e12,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6cdd2bae08857584e86aec30c6170e12,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6cdd2bae08857584e86aec30c6170e12,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6cdd2bae08857584e86aec30c6170e12,
         type: 3}
@@ -127,6 +127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: YellowAngelFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6cdd2bae08857584e86aec30c6170e12,
+        type: 3}
+      propertyPath: m_TagString
+      value: fish
       objectReference: {fileID: 0}
     - target: {fileID: 2854563699051640978, guid: 6cdd2bae08857584e86aec30c6170e12,
         type: 3}
@@ -240,4 +245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swimSpeed: 1
   rotationSpeed: 1
+  end: 0
