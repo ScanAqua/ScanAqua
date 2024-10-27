@@ -122,6 +122,78 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &69291680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69291682}
+  - component: {fileID: 69291681}
+  m_Layer: 0
+  m_Name: System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &69291681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69291680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c8bf0ffa9e32248bd47b894f092522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IP: 192.168.219.106
+  port: 8888
+  isReceived: 0
+  testImage: {fileID: 2800000, guid: a1dc0a9216e336242ace3f528e83712d, type: 3}
+  theme: -1
+  fishes:
+  - {fileID: 4278041345967535589, guid: afa3d4c0f78813043b48d446e8725f9b, type: 3}
+  - {fileID: 101389375936472057, guid: f56ab1f0dae5ca945957abf31f5c5fb6, type: 3}
+  - {fileID: 1512105012545795172, guid: 80d6b952c8060a6409760844ac348390, type: 3}
+  - {fileID: 995389911015355517, guid: ffdc815e16460204eb701211a10b46ec, type: 3}
+  - {fileID: 4196308146116708743, guid: 2dad9b3356dd6dd49ab174c7bab0a015, type: 3}
+  - {fileID: 9049538278554835566, guid: e3d32aefa6b91a542b93cf672ffb21e5, type: 3}
+  - {fileID: 3553045579745586906, guid: c728edaf123125b478ed137b0a1869c5, type: 3}
+  - {fileID: 216261991607878458, guid: de015ffc31957a245b33798e329b494c, type: 3}
+  - {fileID: 4922731949782752897, guid: c28bdb007279e244baa9fadf351122b7, type: 3}
+  - {fileID: 7317064186149531332, guid: c38f28ddab224264abaa61b020d20f5d, type: 3}
+  birds:
+  - {fileID: 8968787236682462438, guid: ff7c5b70164919a4f997942536f836fe, type: 3}
+  - {fileID: 1510756436200430644, guid: 851793b1f4d92f34e8b7bb39413604b4, type: 3}
+  - {fileID: 2094219772496450105, guid: 18325fbe60e2977469b450ef559d605a, type: 3}
+  - {fileID: 6475001490699117262, guid: 012f38e6906993a4497e1a77e216e2ce, type: 3}
+  - {fileID: 5782230736511088752, guid: d195d8adcefa03046815abc6e522bf35, type: 3}
+  dinos:
+  - {fileID: 4081802381014574191, guid: 2d7bb1780779b86479a5c884428f91c2, type: 3}
+  - {fileID: 4340303627973465033, guid: 652d84ab2708b834ba4b13964917e5ce, type: 3}
+  - {fileID: 2732018444248728682, guid: 1f8277053cc67b846adeca6b61afd8d9, type: 3}
+  - {fileID: 771398784470868209, guid: e890392acdbcae342bb98441489abbfd, type: 3}
+  - {fileID: 5788456330668934759, guid: dfd8fa5f658947f49911a4b885b57ef9, type: 3}
+--- !u!4 &69291682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69291680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.707794, y: -93.46766, z: 205.34192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &116579151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2111,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 69291682}
   - {fileID: 1006524172}
   - {fileID: 1284792136}
   - {fileID: 2004050843}

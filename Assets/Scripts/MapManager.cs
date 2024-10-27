@@ -25,6 +25,7 @@ public class MapManager : MonoBehaviour
         fishManager.SetActive(true);
         PlayVideo(seaPanel);       // 바다 영상 재생
         shadow.transform.position = new Vector3(0, -20, 60);
+        GameObject.Find("System").GetComponent<SystemScript>().theme = 0;
     }
 
     public void OnSkyButtonClick()
@@ -33,6 +34,7 @@ public class MapManager : MonoBehaviour
         birdManager.SetActive(true);
         PlayVideo(skyPanel);       // 하늘 영상 재생
         shadow.transform.position = new Vector3(0, -5, 60);
+        GameObject.Find("System").GetComponent<SystemScript>().theme = 1;
     }
 
     public void OnGroundButtonClick()
@@ -41,6 +43,7 @@ public class MapManager : MonoBehaviour
         dinosaurManager.SetActive(true);
         PlayVideo(groundPanel);       // 땅 영상 재생
         shadow.transform.position = new Vector3(0, -2, 60);
+        GameObject.Find("System").GetComponent<SystemScript>().theme = 2;
     }
 
     private void PlayVideo(GameObject panel)
