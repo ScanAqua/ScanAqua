@@ -65,7 +65,7 @@ public class SystemScript : MonoBehaviour
             }
             else if (type == "image")       // 이미지 받을 때
             {
-                int creature = receivedData.GetField("creature").intValue;      // 동물 번호 추출
+                int creature = receivedData.GetField("animal").intValue;      // 동물 번호 추출
                 byte[] imageData = System.Convert.FromBase64String(receivedData.GetField("image").stringValue);         // 이미지 데이터 추출 (base64string -> byte[])
                 Debug.Log($"Theme: {theme}, creature: {creature}");
 
