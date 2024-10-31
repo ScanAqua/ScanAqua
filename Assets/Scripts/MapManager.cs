@@ -66,7 +66,8 @@ public class MapManager : MonoBehaviour
     }
     void Update()
     {
-        if (GameObject.Find("System").GetComponent<SystemScript>().theme >= 0)
+        int theme = GameObject.Find("System").GetComponent<SystemScript>().theme;
+        if (theme == 0)
         {
             // 1. 시간이 26초 이상 되었을 때
             if (videoPlayer.time >= 26 && videoPlayer.time <= 41)
@@ -164,6 +165,18 @@ public class MapManager : MonoBehaviour
                     uiUp.GetComponent<RectTransform>().localPosition = new Vector3(0, 718, 0);
                     uiDown.GetComponent<RectTransform>().localPosition = new Vector3(0, -731, 0);
                 }
+            }
+        }
+        else if (theme == 1 || theme == 2)
+        {
+            if (!videoPlayer.isPlaying)
+            {
+                GameObject[] animals = GameObject.FindGameObjectsWithTag(theme == 1 ? "bird" : "dino");
+                foreach (GameObject animal in animals)
+                {
+                    Destroy(animal);
+                }
+                //EndReached()
             }
         }
     }

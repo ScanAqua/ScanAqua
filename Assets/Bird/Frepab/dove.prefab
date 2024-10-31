@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: dove
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6ac6744bd65384349b2a6fe8fd823b60,
+        type: 3}
+      propertyPath: m_TagString
+      value: bird
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

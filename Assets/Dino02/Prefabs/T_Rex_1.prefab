@@ -864,7 +864,7 @@ GameObject:
   - component: {fileID: 5918331346185655600}
   m_Layer: 0
   m_Name: T_Rex_1
-  m_TagString: Untagged
+  m_TagString: dino
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

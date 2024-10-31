@@ -79,9 +79,8 @@ public class SystemScript : MonoBehaviour
                     Vector3 position = Vector3.zero;
                     GameObject obj = Instantiate(animal);
                     obj.GetComponentInChildren<SkinnedMeshRenderer>().material.mainTexture = receivedImage;
+                    // 텍스쳐를 재질로 적용
                 }
-                //GameObject test = Instantiate(testObject, new Vector3(Random.Range(-40f, 40f), Random.Range(0, 50f), 0), Quaternion.identity);  // 프리팹 생성
-                //test.GetComponent<MeshRenderer>().material.mainTexture = receivedImage;                                                         // 텍스쳐를 재질로 적용
             }
             isReceived = false;
             data = null;                                                        // 전송 받은 데이터 초기화
