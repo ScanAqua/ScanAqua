@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -59,6 +60,14 @@ public class MapManager : MonoBehaviour
     private void EndReached(VideoPlayer vp)
     {
         vp.gameObject.SetActive(false);  // 패널 비활성화
+
+        int theme = GameObject.Find("System").GetComponent<SystemScript>().theme;
+        GameObject[] animals = GameObject.FindGameObjectsWithTag(theme == 0 ? "fish" : theme == 1 ? "bird" : "dino");
+        foreach (GameObject animal in animals)
+        {
+            Destroy(animal);
+        }
+
         uiCanvas.SetActive(true); //UI 다시 활성화
         fishManager.SetActive(false);
         birdManager.SetActive(false);
@@ -66,8 +75,7 @@ public class MapManager : MonoBehaviour
     }
     void Update()
     {
-        int theme = GameObject.Find("System").GetComponent<SystemScript>().theme;
-        if (theme == 0)
+        if (GameObject.Find("System").GetComponent<SystemScript>().theme == 0)
         {
             // 1. 시간이 26초 이상 되었을 때
             if (videoPlayer.time >= 26 && videoPlayer.time <= 41)
@@ -165,18 +173,6 @@ public class MapManager : MonoBehaviour
                     uiUp.GetComponent<RectTransform>().localPosition = new Vector3(0, 718, 0);
                     uiDown.GetComponent<RectTransform>().localPosition = new Vector3(0, -731, 0);
                 }
-            }
-        }
-        else if (theme == 1 || theme == 2)
-        {
-            if (!videoPlayer.isPlaying)
-            {
-                GameObject[] animals = GameObject.FindGameObjectsWithTag(theme == 1 ? "bird" : "dino");
-                foreach (GameObject animal in animals)
-                {
-                    Destroy(animal);
-                }
-                //EndReached()
             }
         }
     }
