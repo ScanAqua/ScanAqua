@@ -128,4 +128,4 @@ MonoBehaviour:
   rotationSpeed: 1
   runSpeed: 2.5
   aniSpeed: 0.5
-  y: 0
+  y: -5

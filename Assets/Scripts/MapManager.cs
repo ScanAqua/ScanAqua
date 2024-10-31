@@ -9,9 +9,6 @@ public class MapManager : MonoBehaviour
     public GameObject seaPanel;
     public GameObject skyPanel;
     public GameObject groundPanel;
-    public GameObject fishManager;
-    public GameObject birdManager;
-    public GameObject dinosaurManager;
     public GameObject shadow;
     public GameObject uiCanvas;
     public GameObject uiUp;
@@ -23,7 +20,6 @@ public class MapManager : MonoBehaviour
     public void OnSeaButtonClick()
     {
         seaPanel.SetActive(true);  // SeaPanel 활성화
-        fishManager.SetActive(true);
         PlayVideo(seaPanel);       // 바다 영상 재생
         shadow.transform.position = new Vector3(0, -20, 60);
         GameObject.Find("System").GetComponent<SystemScript>().theme = 0;
@@ -32,7 +28,6 @@ public class MapManager : MonoBehaviour
     public void OnSkyButtonClick()
     {
         skyPanel.SetActive(true);  // SkyPanel 활성화
-        birdManager.SetActive(true);
         PlayVideo(skyPanel);       // 하늘 영상 재생
         shadow.transform.position = new Vector3(0, -5, 60);
         GameObject.Find("System").GetComponent<SystemScript>().theme = 1;
@@ -41,9 +36,8 @@ public class MapManager : MonoBehaviour
     public void OnGroundButtonClick()
     {
         groundPanel.SetActive(true);  // GroundPanel 활성화
-        dinosaurManager.SetActive(true);
         PlayVideo(groundPanel);       // 땅 영상 재생
-        shadow.transform.position = new Vector3(0, -2, 60);
+        shadow.transform.position = new Vector3(0, -5, 60);
         GameObject.Find("System").GetComponent<SystemScript>().theme = 2;
     }
 
@@ -69,9 +63,7 @@ public class MapManager : MonoBehaviour
         }
 
         uiCanvas.SetActive(true); //UI 다시 활성화
-        fishManager.SetActive(false);
-        birdManager.SetActive(false);
-        dinosaurManager.SetActive(false);
+        GameObject.Find("System").GetComponent<SystemScript>().theme = -1;
     }
     void Update()
     {

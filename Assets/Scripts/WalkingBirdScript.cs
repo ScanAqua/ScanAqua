@@ -14,7 +14,7 @@ public class WalkingBirdScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(ChangeDestination());
-        y = transform.position.y;
+        transform.position = new Vector3(Random.Range(-25, 25), y, Random.Range(35, 0));
         destination = new Vector3(Random.Range(-25, 25), y, Random.Range(35, 0));
     }
 
@@ -28,7 +28,7 @@ public class WalkingBirdScript : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
         speed = (Vector3.Distance(destination, transform.position) / 10 + 1) * runSpeed;
-        GetComponent<Animator>().speed = (speed + Quaternion.Angle(transform.rotation, targetRotation) / 45 * rotationSpeed) * aniSpeed;
+        GetComponent<Animator>().speed = (speed * 0.5f + Quaternion.Angle(transform.rotation, targetRotation) / 45 * rotationSpeed) * aniSpeed;
         transform.Translate(0, 0, speed * Time.deltaTime);
         if(Vector3.Distance(destination, transform.position) < 2)
         {
