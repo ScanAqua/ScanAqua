@@ -17,7 +17,7 @@ public class MapManager : MonoBehaviour
     private VideoPlayer videoPlayer;
     private GameObject[] fishes;
     private float speed = 0;
-    public void OnSeaButtonClick()
+    public void SetSea()
     {
         seaPanel.SetActive(true);  // SeaPanel 활성화
         PlayVideo(seaPanel);       // 바다 영상 재생
@@ -25,7 +25,7 @@ public class MapManager : MonoBehaviour
         GameObject.Find("System").GetComponent<SystemScript>().theme = 0;
     }
 
-    public void OnSkyButtonClick()
+    public void SetSky()
     {
         skyPanel.SetActive(true);  // SkyPanel 활성화
         PlayVideo(skyPanel);       // 하늘 영상 재생
@@ -33,7 +33,7 @@ public class MapManager : MonoBehaviour
         GameObject.Find("System").GetComponent<SystemScript>().theme = 1;
     }
 
-    public void OnGroundButtonClick()
+    public void SetGround()
     {
         groundPanel.SetActive(true);  // GroundPanel 활성화
         PlayVideo(groundPanel);       // 땅 영상 재생

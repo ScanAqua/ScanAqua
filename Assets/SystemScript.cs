@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using WebSocketSharp;
 using Defective.JSON;
+using System.IO;
 
 public class SystemScript : MonoBehaviour
 {
@@ -16,12 +17,23 @@ public class SystemScript : MonoBehaviour
     public GameObject options;
     public int optionCount = 0;
 
+    int[] themeCount = { 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2 };
+
     public GameObject[] fishes = new GameObject[10];
     public GameObject[] birds = new GameObject[5];
     public GameObject[] dinos = new GameObject[5];
 
+    public Text socketState;
+
     void Awake()
     {
+        if (File.Exists(Path.Combine(Application.persistentDataPath, "socket.txt")))
+        {
+            string[] datas = File.ReadAllLines(Path.Combine(Application.persistentDataPath, "socket.txt"));
+            IP = datas[0];
+            port = datas[1];
+        }
+
         socket = new WebSocket($"ws://{IP}:{port}");
         socket.Connect();
         socket.OnMessage += (sender, e) =>
@@ -33,6 +45,20 @@ public class SystemScript : MonoBehaviour
 
     void Update()
     {
+        if (options.activeSelf)
+        {
+            if (socket.ReadyState == WebSocketState.Open)
+            {
+                socketState.text = "O";
+                socketState.color = Color.blue;
+            }
+            else
+            {
+                socketState.text = "X";
+                socketState.color = Color.red;
+            }
+        }
+
         ///* 이미지 전송 테스트용 캡쳐 이미지 보내기
         if (Input.GetKeyDown(KeyCode.Space) && theme == 0)
         {
@@ -89,10 +115,12 @@ public class SystemScript : MonoBehaviour
 
     public void Reconnect()
     {
-        socket.Close();
+        if (socket != null && (socket.ReadyState == WebSocketState.Open || socket.ReadyState == WebSocketState.Connecting)) socket.Close();
 
         IP = GameObject.Find("Input").transform.GetChild(0).GetComponent<InputField>().text;
         port = GameObject.Find("Input").transform.GetChild(1).GetComponent<InputField>().text;
+
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "socket.txt"), $"{IP}\n{port}");
 
         socket = new WebSocket($"ws://{IP}:{port}");
         socket.Connect();
