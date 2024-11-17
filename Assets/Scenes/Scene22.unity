@@ -155,9 +155,11 @@ MonoBehaviour:
   port: 8888
   isReceived: 0
   testImage: {fileID: 2800000, guid: a1dc0a9216e336242ace3f528e83712d, type: 3}
-  theme: -1
+  theme: 0
   options: {fileID: 1210424305}
   optionCount: 0
+  maps: {fileID: 1373189979}
+  nextSceneTrigger: 0
   fishes:
   - {fileID: 4278041345967535589, guid: afa3d4c0f78813043b48d446e8725f9b, type: 3}
   - {fileID: 101389375936472057, guid: f56ab1f0dae5ca945957abf31f5c5fb6, type: 3}
@@ -3206,7 +3208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1972030765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3525,6 +3527,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 69291682}
+  - {fileID: 1373189980}
   - {fileID: 1006524172}
   - {fileID: 1284792136}
   - {fileID: 2004050843}
@@ -3534,4 +3537,3 @@ SceneRoots:
   - {fileID: 461000047}
   - {fileID: 1715617089}
   - {fileID: 482864177}
-  - {fileID: 1373189980}

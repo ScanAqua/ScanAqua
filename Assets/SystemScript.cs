@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using WebSocketSharp;
 using Defective.JSON;
 using System.IO;
+using System.Linq;
 
 public class SystemScript : MonoBehaviour
 {
@@ -12,12 +13,15 @@ public class SystemScript : MonoBehaviour
     public bool isReceived = false;
     string data;                                // 웹소켓으로 전송 받은 데이터를 저장할 변수
     public Texture2D testImage;                 // 테스트 이미지
-    public int theme = -1;                      // 테마 기본값 -1 -> 선택하면 0, 1, 2 중 하나
+    public int theme = 0;                      // 테마 기본값 -1 -> 선택하면 0, 1, 2 중 하나
 
     public GameObject options;
     public int optionCount = 0;
 
+    public MapManager maps;
+    int mapIndex = 0;
     int[] themeCount = { 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2 };
+    public bool nextSceneTrigger = false;
 
     public GameObject[] fishes = new GameObject[10];
     public GameObject[] birds = new GameObject[5];
@@ -43,11 +47,21 @@ public class SystemScript : MonoBehaviour
         };
     }
 
+    void Start()
+    {
+        maps.SetSea();
+    }
+
     void Update()
     {
         if (options.activeSelf)
         {
-            if (socket.ReadyState == WebSocketState.Open)
+            if (socket == null)
+            {
+                socketState.text = "X";
+                socketState.color = Color.red;
+            }
+            else if (socket.ReadyState == WebSocketState.Open)
             {
                 socketState.text = "O";
                 socketState.color = Color.blue;
@@ -59,7 +73,7 @@ public class SystemScript : MonoBehaviour
             }
         }
 
-        ///* 이미지 전송 테스트용 캡쳐 이미지 보내기
+        /* 이미지 전송 테스트용 캡쳐 이미지 보내기
         if (Input.GetKeyDown(KeyCode.Space) && theme == 0)
         {
             //byte[] decodedImage = ScreenCapture.CaptureScreenshotAsTexture().EncodeToPNG();
@@ -70,7 +84,7 @@ public class SystemScript : MonoBehaviour
             sendData.AddField("image", System.Convert.ToBase64String(decodedImage));
             socket.Send(sendData.ToString());
         }
-        //*/
+        */
 
         if (isReceived)
         {
@@ -110,6 +124,28 @@ public class SystemScript : MonoBehaviour
             }
             isReceived = false;
             data = null;                                                        // 전송 받은 데이터 초기화
+        }
+
+        if (nextSceneTrigger)
+        {
+            mapIndex ++;
+
+            theme = (mapIndex % 15) / 5;
+            if (theme == 0) maps.SetSea();
+            else if (theme == 1) maps.SetSky();
+            else if (theme == 2) maps.SetGround();
+            else Debug.Log("Error");
+
+            if (mapIndex % 15 == 0)
+            {
+                GameObject[] animals = GameObject.FindGameObjectsWithTag("fish").Concat(GameObject.FindGameObjectsWithTag("bird")).Concat(GameObject.FindGameObjectsWithTag("dino")).ToArray();
+                foreach (GameObject animal in animals)
+                {
+                    Destroy(animal);
+                }
+            }
+
+            nextSceneTrigger = false;
         }
     }
 

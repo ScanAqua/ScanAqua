@@ -17,12 +17,13 @@ public class MapManager : MonoBehaviour
     private VideoPlayer videoPlayer;
     private GameObject[] fishes;
     private float speed = 0;
+
     public void SetSea()
     {
         seaPanel.SetActive(true);  // SeaPanel 활성화
         PlayVideo(seaPanel);       // 바다 영상 재생
         shadow.transform.position = new Vector3(0, -20, 60);
-        GameObject.Find("System").GetComponent<SystemScript>().theme = 0;
+        //GameObject.Find("System").GetComponent<SystemScript>().theme = 0;
     }
 
     public void SetSky()
@@ -30,7 +31,7 @@ public class MapManager : MonoBehaviour
         skyPanel.SetActive(true);  // SkyPanel 활성화
         PlayVideo(skyPanel);       // 하늘 영상 재생
         shadow.transform.position = new Vector3(0, -5, 60);
-        GameObject.Find("System").GetComponent<SystemScript>().theme = 1;
+        //GameObject.Find("System").GetComponent<SystemScript>().theme = 1;
     }
 
     public void SetGround()
@@ -38,7 +39,7 @@ public class MapManager : MonoBehaviour
         groundPanel.SetActive(true);  // GroundPanel 활성화
         PlayVideo(groundPanel);       // 땅 영상 재생
         shadow.transform.position = new Vector3(0, -5, 60);
-        GameObject.Find("System").GetComponent<SystemScript>().theme = 2;
+        //GameObject.Find("System").GetComponent<SystemScript>().theme = 2;
     }
 
     private void PlayVideo(GameObject panel)
@@ -55,18 +56,15 @@ public class MapManager : MonoBehaviour
     {
         vp.gameObject.SetActive(false);  // 패널 비활성화
 
-        int theme = GameObject.Find("System").GetComponent<SystemScript>().theme;
-        GameObject[] animals = GameObject.FindGameObjectsWithTag(theme == 0 ? "fish" : theme == 1 ? "bird" : "dino");
-        foreach (GameObject animal in animals)
-        {
-            Destroy(animal);
-        }
-
         uiCanvas.SetActive(true); //UI 다시 활성화
-        GameObject.Find("System").GetComponent<SystemScript>().theme = -1;
+        GameObject.Find("System").GetComponent<SystemScript>().nextSceneTrigger = true;
+        //GameObject.Find("System").GetComponent<SystemScript>().theme = -1;
     }
     void Update()
     {
+
+
+        /*
         if (GameObject.Find("System").GetComponent<SystemScript>().theme == 0)
         {
             // 1. 시간이 26초 이상 되었을 때
@@ -167,5 +165,6 @@ public class MapManager : MonoBehaviour
                 }
             }
         }
+        */
     }
 }
