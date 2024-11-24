@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c8bf0ffa9e32248bd47b894f092522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IP: 172.16.5.27
+  IP: 127.0.0.1
   port: 8888
   isReceived: 0
   testImage: {fileID: 2800000, guid: a1dc0a9216e336242ace3f528e83712d, type: 3}
@@ -184,6 +184,16 @@ MonoBehaviour:
   - {fileID: 771398784470868209, guid: e890392acdbcae342bb98441489abbfd, type: 3}
   - {fileID: 5788456330668934759, guid: dfd8fa5f658947f49911a4b885b57ef9, type: 3}
   socketState: {fileID: 1395880474}
+  exFish:
+  - {fileID: 1964404817059474353, guid: f92d421a90c87074bb0ff498d82d659b, type: 3}
+  - {fileID: 2354968935338621463, guid: d500915439cae124f9688f8c6e967d01, type: 3}
+  - {fileID: 1500013220754250878, guid: 9cabcf1ce9ac4134d9135aed830898df, type: 3}
+  - {fileID: 6483506773332620377, guid: 60dd15b0d8a0d9b45a610d1c9940e4f4, type: 3}
+  exBird:
+  - {fileID: 5282196333876178095, guid: 4926f158380deb543a9e25efc892c1c4, type: 3}
+  - {fileID: 5276270175499034150, guid: 94697028856befe4f85ff49008188fd8, type: 3}
+  - {fileID: 6347322720291101922, guid: 5c7d4ac9115453f43abd36189a00c4be, type: 3}
+  exDino: {fileID: 2743240830281974408, guid: a1b496e31fe30484cbc463749148f60a, type: 3}
 --- !u!4 &69291682
 Transform:
   m_ObjectHideFlags: 0
@@ -3304,7 +3314,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972030764}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 8162bc9a94e11a3498bc291760476060, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 0f9a95f4fe6f03f419dc1f83112e07c0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -3318,12 +3328,14 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0

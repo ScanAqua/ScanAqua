@@ -21,6 +21,8 @@ public class MapManager : MonoBehaviour
     public void SetSea()
     {
         seaPanel.SetActive(true);  // SeaPanel 활성화
+        skyPanel.SetActive(false);
+        groundPanel.SetActive(false);
         PlayVideo(seaPanel);       // 바다 영상 재생
         shadow.transform.position = new Vector3(0, -20, 60);
         //GameObject.Find("System").GetComponent<SystemScript>().theme = 0;
@@ -29,6 +31,8 @@ public class MapManager : MonoBehaviour
     public void SetSky()
     {
         skyPanel.SetActive(true);  // SkyPanel 활성화
+        seaPanel.SetActive(false);
+        groundPanel.SetActive(false);
         PlayVideo(skyPanel);       // 하늘 영상 재생
         shadow.transform.position = new Vector3(0, -5, 60);
         //GameObject.Find("System").GetComponent<SystemScript>().theme = 1;
@@ -37,6 +41,8 @@ public class MapManager : MonoBehaviour
     public void SetGround()
     {
         groundPanel.SetActive(true);  // GroundPanel 활성화
+        seaPanel.SetActive(false);
+        skyPanel.SetActive(false);
         PlayVideo(groundPanel);       // 땅 영상 재생
         shadow.transform.position = new Vector3(0, -5, 60);
         //GameObject.Find("System").GetComponent<SystemScript>().theme = 2;

@@ -29,6 +29,11 @@ public class SystemScript : MonoBehaviour
 
     public Text socketState;
 
+    public GameObject[] exFish;
+    public GameObject[] exBird;
+    public GameObject exDino;
+
+
     void Awake()
     {
         if (File.Exists(Path.Combine(Application.persistentDataPath, "socket.txt")))
@@ -50,6 +55,7 @@ public class SystemScript : MonoBehaviour
     void Start()
     {
         maps.SetSea();
+        for (int i = 0; i < 3; i++) Instantiate(exFish[Random.Range(0, exFish.Length)]);
     }
 
     void Update()
@@ -131,19 +137,37 @@ public class SystemScript : MonoBehaviour
             mapIndex ++;
 
             theme = (mapIndex % 15) / 5;
-            if (theme == 0) maps.SetSea();
-            else if (theme == 1) maps.SetSky();
-            else if (theme == 2) maps.SetGround();
-            else Debug.Log("Error");
-
-            if (mapIndex % 15 == 0)
+            if (theme == 0)
             {
-                GameObject[] animals = GameObject.FindGameObjectsWithTag("fish").Concat(GameObject.FindGameObjectsWithTag("bird")).Concat(GameObject.FindGameObjectsWithTag("dino")).ToArray();
-                foreach (GameObject animal in animals)
+                maps.SetSea();
+                if (themeCount[mapIndex % themeCount.Length] != (mapIndex % themeCount.Length == 0 ? themeCount[themeCount.Length - 1] : themeCount[mapIndex % themeCount.Length - 1]))
                 {
-                    Destroy(animal);
+                    GameObject[] prev = GameObject.FindGameObjectsWithTag("dino");
+                    foreach (GameObject animal in prev) Destroy(animal);
+                    for (int i = 0; i < 3; i++) Instantiate(exFish[Random.Range(0, exFish.Length)]);
                 }
             }
+            else if (theme == 1)
+            {
+                maps.SetSky();
+                if (themeCount[mapIndex % themeCount.Length] != (mapIndex % themeCount.Length == 0 ? themeCount[themeCount.Length - 1] : themeCount[mapIndex % themeCount.Length - 1]))
+                {
+                    GameObject[] prev = GameObject.FindGameObjectsWithTag("fish");
+                    foreach (GameObject animal in prev) Destroy(animal);
+                    for (int i = 0; i < 2; i++) Instantiate(exBird[Random.Range(0, exBird.Length)]);
+                }
+            }
+            else if (theme == 2)
+            {
+                maps.SetGround();
+                if (themeCount[mapIndex % themeCount.Length] != (mapIndex % themeCount.Length == 0 ? themeCount[themeCount.Length - 1] : themeCount[mapIndex % themeCount.Length - 1]))
+                {
+                    GameObject[] prev = GameObject.FindGameObjectsWithTag("bird");
+                    foreach (GameObject animal in prev) Destroy(animal);
+                    for (int i = 0; i < 2; i++) Instantiate(exDino);
+                }
+            }
+            else Debug.Log("Error");
 
             nextSceneTrigger = false;
         }
