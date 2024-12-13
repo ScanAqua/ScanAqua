@@ -31,7 +31,9 @@ public class SystemScript : MonoBehaviour
 
     public GameObject[] exFish;
     public GameObject[] exBird;
-    public GameObject exDino;
+    public GameObject[] exDino;
+    public GameObject[] notFish;
+    public GameObject vultures;
 
 
     void Awake()
@@ -56,6 +58,7 @@ public class SystemScript : MonoBehaviour
     {
         maps.SetSea();
         for (int i = 0; i < 3; i++) Instantiate(exFish[Random.Range(0, exFish.Length)]);
+        for (int i = 0; i < notFish.Length; i++) Instantiate(notFish[i]);
     }
 
     void Update()
@@ -145,6 +148,7 @@ public class SystemScript : MonoBehaviour
                     GameObject[] prev = GameObject.FindGameObjectsWithTag("dino");
                     foreach (GameObject animal in prev) Destroy(animal);
                     for (int i = 0; i < 3; i++) Instantiate(exFish[Random.Range(0, exFish.Length)]);
+                    for (int i = 0; i < notFish.Length; i++) Instantiate(notFish[i]);
                 }
             }
             else if (theme == 1)
@@ -154,7 +158,8 @@ public class SystemScript : MonoBehaviour
                 {
                     GameObject[] prev = GameObject.FindGameObjectsWithTag("fish");
                     foreach (GameObject animal in prev) Destroy(animal);
-                    for (int i = 0; i < 2; i++) Instantiate(exBird[Random.Range(0, exBird.Length)]);
+                    for (int i = 0; i < 5; i++) Instantiate(exBird[Random.Range(0, exBird.Length)]);
+                    Instantiate(vultures);
                 }
             }
             else if (theme == 2)
@@ -164,7 +169,7 @@ public class SystemScript : MonoBehaviour
                 {
                     GameObject[] prev = GameObject.FindGameObjectsWithTag("bird");
                     foreach (GameObject animal in prev) Destroy(animal);
-                    for (int i = 0; i < 2; i++) Instantiate(exDino);
+                    for (int i = 0; i < 6; i++) Instantiate(exDino[i]);
                 }
             }
             else Debug.Log("Error");

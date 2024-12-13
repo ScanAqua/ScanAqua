@@ -16,7 +16,6 @@ public class MapManager : MonoBehaviour
 
     private VideoPlayer videoPlayer;
     private GameObject[] fishes;
-    private float speed = 0;
 
     public void SetSea()
     {

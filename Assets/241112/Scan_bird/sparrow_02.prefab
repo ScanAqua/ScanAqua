@@ -141,6 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1
-  runSpeed: 1
+  runSpeed: 2
   aniSpeed: 1
   y: -5

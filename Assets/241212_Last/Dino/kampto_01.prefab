@@ -1,0 +1,949 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &142548979217554407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770607181453787485}
+  - component: {fileID: 2953317181616301322}
+  - component: {fileID: -898996094960936247}
+  m_Layer: 0
+  m_Name: kampto_01
+  m_TagString: dino
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770607181453787485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142548979217554407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 8071830303484977962}
+  - {fileID: 4383856246361618594}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2953317181616301322
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142548979217554407}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ae4c7f279d04bd4e82f8ccc1814a0f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-898996094960936247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142548979217554407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9203469e55c5947bc61c7c9c61b3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0.3
+  runSpeed: 1
+  aniSpeed: 0.8
+  y: -5
+--- !u!1 &526489665963796107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3548913642340859595}
+  m_Layer: 0
+  m_Name: Spinosaurus R UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3548913642340859595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526489665963796107}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.41923365, y: 0.75984627, z: 0.33551615, w: -0.3664774}
+  m_LocalPosition: {x: -0.000000009536743, y: 0.3017296, z: -0.000000019073486}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2426769441004920262}
+  m_Father: {fileID: 8216600663682266246}
+  m_LocalEulerAnglesHint: {x: -59.196384, y: -147.99298, z: 40.19286}
+--- !u!1 &1156565817526057095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8484175459485244332}
+  m_Layer: 0
+  m_Name: Spinosaurus Spine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8484175459485244332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156565817526057095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.08557901, y: -0.011867954, z: -0.03475136, w: 0.99565446}
+  m_LocalPosition: {x: 0.00024579317, y: 0.46426085, z: -0.0000027680396}
+  m_LocalScale: {x: 1, y: 0.99999976, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1479697197824251869}
+  m_Father: {fileID: 6534000464625834179}
+  m_LocalEulerAnglesHint: {x: -9.861801, y: -0.9692038, z: -4.4093695}
+--- !u!1 &1531817127593113794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8597523451142787963}
+  m_Layer: 0
+  m_Name: Spinosaurus L Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8597523451142787963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531817127593113794}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.977853, y: 0.08012899, z: -0.058786117, w: -0.18419304}
+  m_LocalPosition: {x: 0.059874017, y: -0.3683848, z: -0.21545778}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 462809723465231969}
+  m_Father: {fileID: 4451811449840825063}
+  m_LocalEulerAnglesHint: {x: -10.974985, y: -174.90874, z: 163.10527}
+--- !u!1 &1708744392542661247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2793247662264391294}
+  m_Layer: 0
+  m_Name: Spinosaurus R Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2793247662264391294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708744392542661247}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.06325623, y: -0.142257, z: 0.08167178, w: 0.98442435}
+  m_LocalPosition: {x: -0.000000095367426, y: 0.29470116, z: 0.000000044703484}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 0.99999964}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2426769441004920262}
+  m_LocalEulerAnglesHint: {x: -6.734764, y: -16.751204, z: 13.989835}
+--- !u!1 &2693608794013695614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6692585556247852522}
+  m_Layer: 0
+  m_Name: Spinosaurus Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6692585556247852522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2693608794013695614}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.31703672, y: 0.9481372, z: 0.015992975, w: -0.016364422}
+  m_LocalPosition: {x: -0.000000019222497, y: 1.1635481, z: -0.000000005960464}
+  m_LocalScale: {x: 1.0000004, y: 0.99999976, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8605388123400362739}
+  m_LocalEulerAnglesHint: {x: -1.1431739, y: -177.63986, z: -37.0012}
+--- !u!1 &2716747778491339118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3383743578618600428}
+  m_Layer: 0
+  m_Name: Spinosaurus L Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3383743578618600428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2716747778491339118}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.13949937, y: 0.9802431, z: 0.062350806, w: 0.125602}
+  m_LocalPosition: {x: 0.000000166893, y: 0.64885473, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 462809723465231969}
+  m_LocalEulerAnglesHint: {x: -12.347, y: 173.10489, z: -48.579773}
+--- !u!1 &2785234386270665900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6534000464625834179}
+  m_Layer: 0
+  m_Name: Spinosaurus Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6534000464625834179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2785234386270665900}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.011613327, y: 0.08161118, z: 0.9755024, w: 0.20396057}
+  m_LocalPosition: {x: -0.19484971, y: 0.1455359, z: 0.011764884}
+  m_LocalScale: {x: 0.9999989, y: 1.0000001, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8484175459485244332}
+  m_Father: {fileID: 4451811449840825063}
+  m_LocalEulerAnglesHint: {x: -8.947337, y: 0.9313441, z: 156.35388}
+--- !u!1 &3494984368759213348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8691492784599624098}
+  m_Layer: 0
+  m_Name: Spinosaurus Tail03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8691492784599624098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494984368759213348}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.07256911, y: -0.005126235, z: 0.02917965, w: 0.99692327}
+  m_LocalPosition: {x: 0.00037707537, y: 0.6745875, z: 0.0000042033193}
+  m_LocalScale: {x: 1, y: 0.99999964, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6113306235856375247}
+  m_LocalEulerAnglesHint: {x: -5.720772, y: 8.288694, z: 3.2130127}
+--- !u!1 &4333455559325425085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7664028266933186425}
+  m_Layer: 0
+  m_Name: Spinosaurus R Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7664028266933186425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333455559325425085}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.42981914, y: 0.89237934, z: 0.089137964, w: -0.10473322}
+  m_LocalPosition: {x: 0.0000000047683715, y: 0.6489877, z: 0.0000000047683715}
+  m_LocalScale: {x: 0.99999964, y: 0.9999996, z: 0.9999996}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2509257307340008529}
+  m_LocalEulerAnglesHint: {x: 13.380804, y: -169.66458, z: -53.719143}
+--- !u!1 &4337891839999429829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236362325373248221}
+  m_Layer: 0
+  m_Name: Spinosaurus L UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &236362325373248221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337891839999429829}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.4093319, y: 0.71165204, z: -0.36517584, w: 0.43891388}
+  m_LocalPosition: {x: -0.000000076293944, y: 0.3177215, z: 0.0000000333786}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6757875107785511901}
+  m_Father: {fileID: 8376591222418252540}
+  m_LocalEulerAnglesHint: {x: 61.314095, y: 136.75912, z: 34.412666}
+--- !u!1 &4939669299018638594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8071830303484977962}
+  - component: {fileID: 4268490428828514331}
+  m_Layer: 0
+  m_Name: kampto_y
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8071830303484977962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939669299018638594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -2.3283064e-10, z: -4.656613e-10, w: 1}
+  m_LocalPosition: {x: 0.0000000018626451, y: 0, z: 0.000000059604645}
+  m_LocalScale: {x: 0.009999998, y: 0.009999998, z: 0.009999998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 770607181453787485}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &4268490428828514331
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939669299018638594}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5ddc1cf24234f9148993efcff4007a9c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 2486955765421023935, guid: ec474de15b4078d4eb5822ed10c22559, type: 3}
+  m_Bones:
+  - {fileID: 4451811449840825063}
+  - {fileID: 6534000464625834179}
+  - {fileID: 8484175459485244332}
+  - {fileID: 1479697197824251869}
+  - {fileID: 8605388123400362739}
+  - {fileID: 6692585556247852522}
+  - {fileID: 8376591222418252540}
+  - {fileID: 236362325373248221}
+  - {fileID: 6757875107785511901}
+  - {fileID: 1015142994084897784}
+  - {fileID: 8216600663682266246}
+  - {fileID: 3548913642340859595}
+  - {fileID: 2426769441004920262}
+  - {fileID: 2793247662264391294}
+  - {fileID: 8597523451142787963}
+  - {fileID: 462809723465231969}
+  - {fileID: 3383743578618600428}
+  - {fileID: 3056660750886572417}
+  - {fileID: 2509257307340008529}
+  - {fileID: 7664028266933186425}
+  - {fileID: 6210636038505581974}
+  - {fileID: 6113306235856375247}
+  - {fileID: 8691492784599624098}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 4451811449840825063}
+  m_AABB:
+    m_Center: {x: -0.32405555, y: -0.3626336, z: -0.021666616}
+    m_Extent: {x: 1.7595679, y: 2.8218598, z: 0.86285114}
+  m_DirtyAABB: 0
+--- !u!1 &4950821907249034753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4383856246361618594}
+  m_Layer: 0
+  m_Name: kampto_y_BONE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4383856246361618594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950821907249034753}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0.0048239217, y: 0.9566191, z: -0.44124687}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4451811449840825063}
+  m_Father: {fileID: 770607181453787485}
+  m_LocalEulerAnglesHint: {x: -89.98021, y: 0, z: 0}
+--- !u!1 &5529028056607120286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6113306235856375247}
+  m_Layer: 0
+  m_Name: Spinosaurus Tail02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6113306235856375247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5529028056607120286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0021829884, y: 0.0076363557, z: 0.07007413, w: 0.9975102}
+  m_LocalPosition: {x: 0.00038577168, y: 0.63473314, z: 0.000002554655}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8691492784599624098}
+  m_Father: {fileID: 6210636038505581974}
+  m_LocalEulerAnglesHint: {x: 2.172742, y: 4.0750933, z: 9.854169}
+--- !u!1 &5831867468021491252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8605388123400362739}
+  m_Layer: 0
+  m_Name: Spinosaurus Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8605388123400362739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831867468021491252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.009833306, y: 0.009018079, z: -0.16980998, w: 0.9853865}
+  m_LocalPosition: {x: 0.030512063, y: 0.9666669, z: -0.00047242283}
+  m_LocalScale: {x: 0.9999997, y: 0.9999998, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6692585556247852522}
+  m_Father: {fileID: 1479697197824251869}
+  m_LocalEulerAnglesHint: {x: 4.0791397, y: 1.100499, z: -19.00355}
+--- !u!1 &6287952652517790959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4451811449840825063}
+  m_Layer: 0
+  m_Name: Spinosaurus Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4451811449840825063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287952652517790959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.04638731, y: 0.7120259, z: 0.05824819, w: 0.6981937}
+  m_LocalPosition: {x: -0.013579943, y: -0.20531772, z: 0.47871727}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8597523451142787963}
+  - {fileID: 3056660750886572417}
+  - {fileID: 6534000464625834179}
+  - {fileID: 6210636038505581974}
+  m_Father: {fileID: 4383856246361618594}
+  m_LocalEulerAnglesHint: {x: -1.0413384, y: 91.04675, z: 8.477401}
+--- !u!1 &6303002015532617242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6210636038505581974}
+  m_Layer: 0
+  m_Name: Spinosaurus Tail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6210636038505581974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303002015532617242}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.07195601, y: 0.011113174, z: -0.31470332, w: 0.9463935}
+  m_LocalPosition: {x: 0.20678984, y: 0.45824146, z: 0.024880042}
+  m_LocalScale: {x: 1, y: 0.99999976, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6113306235856375247}
+  m_Father: {fileID: 4451811449840825063}
+  m_LocalEulerAnglesHint: {x: -3.36982, y: 4.125759, z: -36.700714}
+--- !u!1 &6359877539341678316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015142994084897784}
+  m_Layer: 0
+  m_Name: Spinosaurus L Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1015142994084897784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359877539341678316}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.15921424, y: 0.098529436, z: 0.061922703, w: 0.98036134}
+  m_LocalPosition: {x: -0.000000076293944, y: 0.29462343, z: 0.00000016212464}
+  m_LocalScale: {x: 0.99999994, y: 0.9999996, z: 0.9999996}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6757875107785511901}
+  m_LocalEulerAnglesHint: {x: 18.175919, y: 12.596558, z: 11.4381695}
+--- !u!1 &6653268248811905660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8216600663682266246}
+  m_Layer: 0
+  m_Name: Spinosaurus R Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8216600663682266246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6653268248811905660}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.33714917, y: 0.71207154, z: 0.6130574, w: -0.058697134}
+  m_LocalPosition: {x: -0.14752552, y: 0.43552032, z: 0.06978146}
+  m_LocalScale: {x: 1, y: 0.99999976, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3548913642340859595}
+  m_Father: {fileID: 1479697197824251869}
+  m_LocalEulerAnglesHint: {x: -55.687904, y: -110.35634, z: -91.6289}
+--- !u!1 &6907255186301669215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6757875107785511901}
+  m_Layer: 0
+  m_Name: Spinosaurus L Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6757875107785511901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6907255186301669215}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0097508095, y: -0.3058146, z: -0.5063473, w: 0.80622256}
+  m_LocalPosition: {x: 0.000000095367426, y: 0.31322178, z: 0.000000030994414}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1015142994084897784}
+  m_Father: {fileID: 236362325373248221}
+  m_LocalEulerAnglesHint: {x: -18.262625, y: -32.262115, z: -58.59526}
+--- !u!1 &7217213201927800693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2426769441004920262}
+  m_Layer: 0
+  m_Name: Spinosaurus R Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2426769441004920262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217213201927800693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0390946, y: 0.19837657, z: -0.6422489, w: 0.73934746}
+  m_LocalPosition: {x: 0.000000102519984, y: 0.32045978, z: 0.00000006198883}
+  m_LocalScale: {x: 1.0000004, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2793247662264391294}
+  m_Father: {fileID: 3548913642340859595}
+  m_LocalEulerAnglesHint: {x: 18.265453, y: 15.067246, z: -78.978424}
+--- !u!1 &7351830359081644411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8376591222418252540}
+  m_Layer: 0
+  m_Name: Spinosaurus L Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8376591222418252540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351830359081644411}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.2516961, y: 0.74363595, z: -0.60777575, w: -0.11942918}
+  m_LocalPosition: {x: -0.14757058, y: 0.43836486, z: -0.055246107}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 236362325373248221}
+  m_Father: {fileID: 1479697197824251869}
+  m_LocalEulerAnglesHint: {x: 72.29443, y: 143.4961, z: -66.331795}
+--- !u!1 &7917420002263275710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1479697197824251869}
+  m_Layer: 0
+  m_Name: Spinosaurus Spine2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1479697197824251869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7917420002263275710}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0023451103, y: -0.018612469, z: 0.05040377, w: 0.99855274}
+  m_LocalPosition: {x: 0.00024235695, y: 0.46184707, z: -0.000003260374}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8376591222418252540}
+  - {fileID: 8605388123400362739}
+  - {fileID: 8216600663682266246}
+  m_Father: {fileID: 8484175459485244332}
+  m_LocalEulerAnglesHint: {x: 0.41986603, y: -2.2815437, z: 7.1738076}
+--- !u!1 &8102721785989696454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2509257307340008529}
+  m_Layer: 0
+  m_Name: Spinosaurus R Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2509257307340008529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102721785989696454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.15007213, y: -0.091554046, z: -0.37933087, w: 0.9084076}
+  m_LocalPosition: {x: -0.000000013113022, y: 0.46034953, z: 0.000000039339064}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7664028266933186425}
+  m_Father: {fileID: 3056660750886572417}
+  m_LocalEulerAnglesHint: {x: 9.681027, y: -0.50443244, z: -25.597967}
+--- !u!1 &8118580996892024051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462809723465231969}
+  m_Layer: 0
+  m_Name: Spinosaurus L Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &462809723465231969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118580996892024051}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.12611488, y: -0.074738115, z: -0.41627422, w: 0.89734334}
+  m_LocalPosition: {x: 0.000000019073486, y: 0.46004236, z: 0.000000019073486}
+  m_LocalScale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3383743578618600428}
+  m_Father: {fileID: 8597523451142787963}
+  m_LocalEulerAnglesHint: {x: -10.321986, y: -1.7028711, z: -75.97749}
+--- !u!1 &8724063484231661932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3056660750886572417}
+  m_Layer: 0
+  m_Name: Spinosaurus R Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3056660750886572417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724063484231661932}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.60659665, y: 0.7805797, z: 0.12994182, w: 0.07649169}
+  m_LocalPosition: {x: 0.060672436, y: -0.36838427, z: 0.20669869}
+  m_LocalScale: {x: 1.0000001, y: 0.9999998, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2509257307340008529}
+  m_Father: {fileID: 4451811449840825063}
+  m_LocalEulerAnglesHint: {x: 14.351212, y: 168.27924, z: 88.36243}

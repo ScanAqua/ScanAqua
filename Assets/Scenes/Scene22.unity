@@ -192,8 +192,22 @@ MonoBehaviour:
   exBird:
   - {fileID: 5282196333876178095, guid: 4926f158380deb543a9e25efc892c1c4, type: 3}
   - {fileID: 5276270175499034150, guid: 94697028856befe4f85ff49008188fd8, type: 3}
-  - {fileID: 6347322720291101922, guid: 5c7d4ac9115453f43abd36189a00c4be, type: 3}
-  exDino: {fileID: 2743240830281974408, guid: a1b496e31fe30484cbc463749148f60a, type: 3}
+  exDino:
+  - {fileID: 2743240830281974408, guid: a1b496e31fe30484cbc463749148f60a, type: 3}
+  - {fileID: 142548979217554407, guid: 8652009229de93b4da3e49d3e57b2bb5, type: 3}
+  - {fileID: 6332857441620592700, guid: 0829a132f9d531e499cda41698aaf563, type: 3}
+  - {fileID: 3919471941866560448, guid: a64297c377d0c084eb5dba24901f8f8f, type: 3}
+  - {fileID: 7943725684112850877, guid: be5892988f11cdf44b4234d3bfcf6a5d, type: 3}
+  - {fileID: 6302953296989626074, guid: 848fb337cf30fe545893cf59b5215564, type: 3}
+  notFish:
+  - {fileID: 251405130201820377, guid: 1a6555f1807e915488546d0760006984, type: 3}
+  - {fileID: 5488360656309169914, guid: df279499f5e6a6a46aafbd8e199a5f39, type: 3}
+  - {fileID: 5488360656309169914, guid: df279499f5e6a6a46aafbd8e199a5f39, type: 3}
+  - {fileID: 1490486778596576518, guid: 426a1961508d92f43bef08bb4d33e042, type: 3}
+  - {fileID: 1490486778596576518, guid: 426a1961508d92f43bef08bb4d33e042, type: 3}
+  - {fileID: 1490486778596576518, guid: 426a1961508d92f43bef08bb4d33e042, type: 3}
+  vultures: {fileID: 3918373299963687489, guid: b40f8d407bd2321458465d240f7d7d6a,
+    type: 3}
 --- !u!4 &69291682
 Transform:
   m_ObjectHideFlags: 0
@@ -396,7 +410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &317526268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1295,7 +1309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &856673051
 RectTransform:
   m_ObjectHideFlags: 0
