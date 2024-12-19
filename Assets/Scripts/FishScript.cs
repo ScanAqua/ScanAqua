@@ -31,7 +31,7 @@ public class FishScript : MonoBehaviour
             }
             speed = Vector3.Distance(destination, transform.position) / 5 + 0.3f;
             GetComponent<Animator>().speed = speed * aniSpeed;
-            transform.Translate(0, 0, speed * Time.deltaTime);
+            transform.Translate(0, 0, speed * swimSpeed * Time.deltaTime);
         }
         else
         {
