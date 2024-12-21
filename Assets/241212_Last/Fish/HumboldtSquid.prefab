@@ -553,6 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6584428384435227812}
   - component: {fileID: 4156174285086988851}
+  - component: {fileID: 4441549155659482011}
   m_Layer: 0
   m_Name: HumboldtSquid
   m_TagString: fish
@@ -598,6 +599,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4441549155659482011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490486778596576518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8737221dd6a18af4da66d6b427ee8f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swimSpeed: 1
+  rotationSpeed: 1
+  aniSpeed: 1
+  end: 0
 --- !u!1 &1668004265251568837
 GameObject:
   m_ObjectHideFlags: 0

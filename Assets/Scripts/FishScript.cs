@@ -56,7 +56,7 @@ public class FishScript : MonoBehaviour
         while (true)
         {
             // Vector3 값을 랜덤하게 재지정
-            destination = new Vector3(Random.Range(-25, 25), Random.Range(-17, 17), Random.Range(30, 10));
+            destination = new Vector3(Random.Range(-25, 25), Random.Range(-17, 17), Random.Range(30, 0));
 
             // 5초 기다림
             yield return new WaitForSeconds(Random.Range(1, 4));

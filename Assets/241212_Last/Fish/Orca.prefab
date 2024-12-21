@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swimSpeed: 1
-  rotationSpeed: 1
-  aniSpeed: 0.2
+  rotationSpeed: 0.5
+  aniSpeed: 0.4
   end: 0
 --- !u!1 &460536574023368308
 GameObject:
