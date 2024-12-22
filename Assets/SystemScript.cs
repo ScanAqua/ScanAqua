@@ -63,6 +63,10 @@ public class SystemScript : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.RightShift)) nextSceneTrigger = true;
+        if (Input.GetKey(KeyCode.LeftShift) ) Debug.Log("Lshift");
+        if (Input.GetKeyDown(KeyCode.RightShift)) Debug.Log("Rshift");
+
         if (options.activeSelf)
         {
             if (socket == null)
